@@ -8,14 +8,14 @@ print("QR Code Generator")
 data = input("Enter text or URL for QR code: ")
 
 # Caminho para salvar o QR Code
-repo_path = "/users/Ygor-Silva/Documents/GitHub/Gerador_QRCode" 
+repo_path = "./QR_Gerados" 
 
 # Criar diretório caso não exista
 if not os.path.exists(repo_path):
     os.makedirs(repo_path)
 
 # Nome do arquivo com data e hora
-filename = f"qrcode-{datetime.datetime.now().strftime('%Y-%m-%d-%H-%M-%S')}.png" 
+filename = f"qrcode-{datetime.datetime.now().strftime('_%d_%m_%Y_')}.png" 
 file_path = os.path.join(repo_path, filename)
 
 # Gerar QR code
